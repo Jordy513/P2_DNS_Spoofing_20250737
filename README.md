@@ -233,24 +233,11 @@ Siguiendo el esquema técnico implementado a partir de tu matrícula, el laborat
 
 | Dispositivo | Tipo / Modelo | Interfaz Local | Interfaz Remota | Dirección IP | Máscara | Rol / Modo VTP |
 | --- | --- | --- | --- | --- | --- | --- |
-| **R1** | Cisco IOSv L3 | `e0/0` | SW1 (`e0/1`) | `20.25.37.1` | `/24` | Default Gateway / Servidor DNS |
-| **SW1** | Cisco IOSv L2 | `e0/1`<br>
-
-<br>`e0/0`<br>
-
-<br>`e0/3`<br>
-
-<br>`e0/2` | R1 (`e0/0`)<br>
-
-<br>Atacante (`e0`)<br>
-
-<br>Cliente (`eth1`)<br>
-
-<br>SERVER (`eth1`) | `20.25.37.2` | `/24` | **VTP Server** (Dominio: `ITLA_SEC`) |
-| **Atacante** | Kali Linux VM | `e0` | SW1 (`e0/0`) | `20.25.37.100` | `/24` | Servidor Web Apache / Envenenador |
-| **Cliente Legítimo** | Estación Linux | `eth1` | SW1 (`e0/3`) | `20.25.37.50` | `/24` | Estación Víctima de Consultas |
-| **SERVER** | Docker Container | `eth1` | SW1 (`e0/2`) | `20.25.37.10` | `/24` | Servidor Destino Original |
-
+| **R1** | Cisco IOSv L3 | e0/0 | SW1 (e0/1) | 20.25.37.1 | /24 | Default Gateway |
+| **SW1** | Cisco IOSv L2 | e0/1, e0/0, e0/3, e0/2 | R1 (e0/0), Atacante (e0), Cliente (eth1), SERVER (eth1) | 20.25.37.2 | /24 | **VTP Server** (Dominio: ITLA_SEC) |
+| **Atacante** | Kali Linux VM | e0 | SW1 (e0/0) | 20.25.37.100 | /24 | Generador de Inyección Ofensiva |
+| **Cliente Legítimo** | Estación Linux | eth1 | SW1 (e0/3) | 20.25.37.50 | /24 | Host de Acceso Afectado |
+| **SERVER** | Docker Container | eth1 | SW1 (e0/2) | 20.25.37.10 | /24 | Servidor de Producción Afectado |
 ---
 
 ## 5. Ejecución del Ataque
