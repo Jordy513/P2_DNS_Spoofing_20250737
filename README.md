@@ -364,9 +364,9 @@ SW1(config-if)# ip arp inspection trust
 
 ## 8. Video Demostrativo
 
-🎥 **[Ver demostración en YouTube](https://www.google.com/search?q=https://youtu.be/Enlace_Simulado_DNS_20250737)**
+🎥 **[Ver demostración en YouTube](https://youtu.be/e91nn1YUB-I)**
 
-**Duración:** 4:58 minutos
+**Duración:** 4:35 minutos
 
 **Contenido del video:**
 
