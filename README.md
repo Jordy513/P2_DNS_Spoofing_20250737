@@ -1,5 +1,3 @@
----
-
 # Ataque DNS Spoofing / DNS Poisoning con MitM
 
 ### Jordy Jose Rosario Ortiz · Matrícula: 2025-0737
