@@ -1,5 +1,3 @@
-Aquí tienes el contenido completo y definitivo en formato Markdown para el laboratorio final de **DNS Spoofing / DNS Poisoning con MitM**:
-
 ---
 
 # Ataque DNS Spoofing / DNS Poisoning con MitM
